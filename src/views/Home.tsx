@@ -9,7 +9,7 @@ export default defineComponent({
       return store.state.special.title
     })
     const requstFn = async ()=>{
-      console.log("发起网络请求")
+      console.log("====发起网络请求====")
       const data = await PostUserRecord()
       console.log(data[0].code)
     }
