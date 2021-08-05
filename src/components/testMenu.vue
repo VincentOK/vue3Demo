@@ -12,7 +12,7 @@ export default defineComponent({
     components:{HelloWord},
     setup(props,_){
         const Value = ref<string>("按钮")
-        const testFn = ():void=>{
+        const testFn = <T = any>():void=>{
             console.log("=====")
         }
         return{

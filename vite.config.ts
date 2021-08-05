@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import vueJsx from '@vitejs/plugin-vue-jsx';
+import styleImport from 'vite-plugin-style-import';
 import path from 'path';
 
 const pathResolve =  (pathStr: string)=> {
@@ -8,7 +9,19 @@ const pathResolve =  (pathStr: string)=> {
 };
 
 module.exports = defineConfig({
-  plugins: [vue(), vueJsx()],
+  plugins: [
+    vue(), 
+    vueJsx(),
+    styleImport({
+      libs: [
+        {
+          libraryName: 'vant',
+          esModule: true,
+          resolveStyle: (name) => `vant/es/${name}/style`,
+        },
+      ],
+    }),
+  ],
   alias: {
     '@': pathResolve('./src'),
   },
