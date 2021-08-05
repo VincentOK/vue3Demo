@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="test_menu">
         <button @click="testFn">{{Value}}</button>
         <HelloWord/>
     </div>
@@ -22,3 +22,9 @@ export default defineComponent({
     }
 })
 </script>
+<style lang="scss" scoped>
+.test_menu{
+    width: 100px;
+    height: 100px;
+}
+</style>

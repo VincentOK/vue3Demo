@@ -25,4 +25,5 @@
     "src/**/*.tsx",
     "src/**/*.vue",
   ],
+  "exclude":["src/style/**/*.scss",],
 }
