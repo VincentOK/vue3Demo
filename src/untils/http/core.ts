@@ -5,20 +5,12 @@ import Axios, {
   AxiosInstance,
   Canceler
 } from "axios"
-
 // import NProgress from "../progress"
 
 import {genConfig, httpSuccessCode} from "./config"
+import { EnclosureHttpRequestConfig, cancelTokenType, EnclosureHttpResoponse, EnclosureHttpError, RequestMethods } from "./types"
 
 import { transformConfigByMethod } from "./utils"
-
-import {
-  cancelTokenType,
-  RequestMethods,
-  EnclosureHttpRequestConfig,
-  EnclosureHttpResoponse,
-  EnclosureHttpError
-} from "./types.d"
 
 class EnclosureHttp {
   constructor() {
@@ -31,8 +23,6 @@ class EnclosureHttp {
   // 保存当前Axios实例对象
   private static axiosInstance: AxiosInstance = Axios.create(genConfig());
 
-  // 保存 EnclosureHttp实例
-  private static EnclosureHttpInstance: EnclosureHttp
 
   // axios取消对象
   private CancelToken: CancelTokenStatic = Axios.CancelToken;

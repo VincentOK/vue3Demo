@@ -1,4 +1,4 @@
-import { EnclosureHttpRequestConfig } from "./types.d"
+import { EnclosureHttpRequestConfig } from "./types"
 
 export function excludeProps<T extends { [key: string]: any }>(
   origin: T,

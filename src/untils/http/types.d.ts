@@ -14,9 +14,6 @@ export type RequestMethods = Extract<Method, 'get' | 'post' | 'put' | 'delete' |
     'option' | 'head'>
 
 export interface EnclosureHttpRequestConfig extends AxiosRequestConfig {
-    cancelToken: any
-    data: any
-    url: any
     beforeRequestCallback?: (request: EnclosureHttpRequestConfig) => void // 请求发送之前
     beforeResponseCallback?: (response: EnclosureHttpResoponse) => void // 相应返回之前
 }

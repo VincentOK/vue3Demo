@@ -1,7 +1,6 @@
 import type { RouteLocationNormalized, RouteRecordNormalized } from 'vue-router';
 import { unref } from 'vue';
 import { isObject } from './is';
-import { Recordable, TargetContext } from '../global';
 
 export const noop = () => {};
 

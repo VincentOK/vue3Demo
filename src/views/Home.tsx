@@ -1,4 +1,4 @@
-import { defineComponent,computed,onMounted,watchEffect,ref,watch } from 'vue';
+import { defineComponent,computed,onMounted } from 'vue';
 import { useStore } from 'vuex';
 import {RouterLink} from 'vue-router';
 import {PostUserRecord} from "../api/home"
