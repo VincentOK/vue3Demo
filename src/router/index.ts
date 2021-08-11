@@ -1,21 +1,15 @@
 import {App} from "vue"
 import { RouteRecordRaw, createRouter, createWebHistory } from 'vue-router';
-
-const routes: RouteRecordRaw[] = [
-  {
-    path: '/',
-    name: 'Home',
-    component: () => import('../views/Home.vue'),
-  },
-  {
-    path: '/about',
-    name: 'About',
-    component: () => import('../views/About.vue'),
-  },
-];
-
+import routes from "./asyncRouter";
 const router = createRouter({
   history: createWebHistory(),
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return { ...savedPosition, behavior: 'smooth' }
+    } else {
+      return { x: 0, y: 0, behavior: 'smooth' }
+    }
+  },
   routes,
 });
 

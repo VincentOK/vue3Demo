@@ -1,9 +1,14 @@
 import {App} from "vue"
 import { createStore } from 'vuex'
-import special from './modules/special'
+const modules = import.meta.globEager('./modules/*.ts')
+const map:any = {};
+Object.keys(modules).forEach(file => {
+  const modulesName:string = file.replace('./modules/', '').replace('.ts', '')
+  map[modulesName] = modules[file].default
+})
 const store = createStore({
   modules: {
-    special,
+    ...map
   }
 })
 export function setupStore(app: App<Element>) {
