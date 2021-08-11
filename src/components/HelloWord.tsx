@@ -1,5 +1,5 @@
 import { defineComponent, ref } from 'vue';
-
+import Logo from '../assets/logo.png';
 export default defineComponent({
   name: 'App',
   props: {
@@ -15,6 +15,7 @@ export default defineComponent({
         <h1>{prop.msg}</h1>
         <button onClick={() => {count.value ++}}>count is: { count.value }</button>
         <p>Edit <code>components/HelloWorld.vue</code> to test hot module replacement.</p>
+        <img src={Logo} alt="" />
       </>
     );
   },

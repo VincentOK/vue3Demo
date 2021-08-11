@@ -6,12 +6,12 @@ export interface httpSuccessCode {
   message:string;
   result: any;
 }
-
+const baseURL = import.meta.env.VITE_APP_BASE_API
 /**
  * 默认配置
  */
 export const defaultConfig: AxiosRequestConfig = {
-  baseURL: "/api",
+  baseURL: baseURL,
   timeout: 10000, //10秒超时
   headers: {
     Accept: "application/json, text/plain, */*",

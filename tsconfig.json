@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "jsx": "preserve",
+    "jsx":"preserve",
     "allowJS":true,
     "target": "esnext",
     "module": "esnext",
@@ -11,7 +11,8 @@
     "types": ["vite/client", "node"],
     "removeComments":true, // 删除注释 
     "strict": true,
-    "noUnusedLocals": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters":false,
     "noImplicitReturns": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
